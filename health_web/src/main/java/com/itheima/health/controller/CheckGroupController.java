@@ -54,4 +54,10 @@ public class CheckGroupController {
         checkGroupService.update(checkGroup,checkitemIds);
         return new Result(true,MessageConstant.EDIT_CHECKGROUP_SUCCESS);
     }
+
+    @GetMapping("/findAll")
+    public Result findAll(){
+        List<CheckGroup> list = checkGroupService.findAll();
+        return new Result(true, MessageConstant.QUERY_CHECKGROUP_SUCCESS, list);
+    }
 }

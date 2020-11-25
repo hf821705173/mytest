@@ -53,4 +53,8 @@
             attention=#{attention}
         where id=#{id}
     </update>
+
+    <select id="findAll" resultType="CheckGroup">
+        select * from t_checkgroup
+    </select>
 </mapper>

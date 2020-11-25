@@ -79,4 +79,9 @@ public class CheckGroupServiceImpl implements CheckGroupService {
         }
     }
 
+    @Override
+    public List<CheckGroup> findAll() {
+        return checkGroupDao.findAll();
+    }
+
 }
